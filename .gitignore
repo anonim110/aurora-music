@@ -1,16 +1,50 @@
+# Local credentials and private configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+secrets/
+credentials/
+*credentials*.json
+*secrets*.json
+*.pem
+*.p12
+*.pfx
+*.key
+config.local.*
+
+# Personal player state, downloaded media and logs
+aurora_data*.json
+aurora_data*.tmp
+*.sqlite
+*.sqlite3
+*.db
+*.log
+audio/
+downloads/
+cache/
+
+# Python, Node and test output
 __pycache__/
 *.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+node_modules/
 .test-deps/
 .venv/
 .build-venv/
 .build-tools/
+/tests/preview.png
+/tests/widget-preview.png
+/screenshot.png
+/shot_tail.png
+/tail_full.png
+/tail_test.png
+
+# Generated Windows build output
 build/
 dist/
 AuroraMusic.spec
-aurora_data.json
-shot_tail.png
-tail_full.png
-tail_test.png
-tests/preview.png
-tests/widget-preview.png
-aurora_data.tmp

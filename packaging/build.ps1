@@ -31,4 +31,4 @@ if (-not $InnoCompiler) {
 if (-not $InnoCompiler) { throw "ISCC.exe not found. Install Inno Setup 7 or pass -InnoCompiler." }
 & $InnoCompiler packaging\aurora.iss
 if ($LASTEXITCODE -ne 0) { throw "Could not build Setup.exe" }
-Write-Host "Built dist\AuroraMusic\AuroraMusic.exe and dist\AuroraMusic-Setup-1.0.0.exe"
+Write-Host "Built dist\AuroraMusic\AuroraMusic.exe and dist\AuroraMusic-Setup-1.0.1.exe"
