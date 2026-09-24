@@ -1,0 +1,8 @@
+customtkinter>=5.2.2
+pygame>=2.6.0
+requests>=2.31.0
+Pillow>=10.0.0
+yt-dlp
+imageio-ffmpeg
+pywebview>=5.0
+pystray>=0.19.5

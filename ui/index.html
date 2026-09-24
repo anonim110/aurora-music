@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aurora — музыка</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside id="side" aria-label="Разделы">
+      <div class="logo">
+        <span class="logo-mark" data-icon="logo" aria-hidden="true"></span>
+        <div class="logo-wordmark">AURORA<span>музыка рядом</span></div>
+      </div>
+      <nav aria-label="Основная навигация">
+        <span class="nav-label">СЛУШАТЬ</span>
+        <button class="nav-btn active" data-page="home" title="Главная">
+          <span data-icon="home"></span><span class="nav-text">Главная</span>
+        </button>
+        <button class="nav-btn" data-page="search" title="Поиск">
+          <span data-icon="search"></span><span class="nav-text">Поиск</span>
+        </button>
+        <span class="nav-label library-label">ВАША КОЛЛЕКЦИЯ</span>
+        <button class="nav-btn" data-page="fav" title="Избранное">
+          <span data-icon="heartO"></span
+          ><span class="nav-text">Избранное</span>
+        </button>
+        <button class="nav-btn" data-page="queue" title="Очередь">
+          <span data-icon="queue"></span><span class="nav-text">Очередь</span
+          ><span id="queue-count">0</span>
+        </button>
+        <button class="nav-btn" data-page="history" title="Недавно слушали">
+          <span data-icon="history"></span
+          ><span class="nav-text">Недавно слушали</span>
+        </button>
+      </nav>
+      <div class="side-foot">
+        <div class="side-divider"></div>
+        <button id="btn-quit">Выйти из приложения</button>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header id="topbar">
+        <div id="crumbs">Обзор / Музыка</div>
+        <div class="top-actions">
+          <label class="search-box" for="q"
+            ><span data-icon="search" aria-hidden="true"></span
+            ><input
+              id="q"
+              type="search"
+              aria-label="Поиск трека или исполнителя"
+              placeholder="Название или исполнитель"
+              spellcheck="false"
+          /></label>
+          <button
+            id="btn-search-go"
+            class="top-button"
+            title="Найти"
+            aria-label="Найти"
+          >
+            <span data-icon="search"></span>
+          </button>
+          <button
+            id="btn-refresh"
+            class="top-button subtle"
+            title="Обновить"
+            aria-label="Обновить"
+          >
+            <span data-icon="refresh"></span>
+          </button>
+        </div>
+      </header>
+      <section id="content" aria-live="polite"></section>
+    </main>
+
+    <footer id="bar" aria-label="Плеер">
+      <div class="bar-left">
+        <div class="bar-art-wrap">
+          <img id="bar-art" alt="" /><span
+            data-icon="music"
+            class="bar-art-placeholder"
+          ></span>
+        </div>
+        <div class="bar-meta">
+          <div id="bar-title">Музыка начинается здесь</div>
+          <div id="bar-artist">Выберите трек</div>
+        </div>
+        <button
+          id="bar-like"
+          class="ghost-btn"
+          title="В избранное"
+          aria-label="В избранное"
+        ></button>
+      </div>
+      <div class="bar-center">
+        <div class="controls">
+          <button
+            id="btn-shuffle"
+            class="ghost-btn small"
+            title="Перемешивание"
+            aria-label="Перемешивание"
+          >
+            <span data-icon="shuffle"></span>
+          </button>
+          <button
+            id="btn-prev"
+            class="ghost-btn"
+            title="Предыдущий"
+            aria-label="Предыдущий"
+          >
+            <span data-icon="previous"></span>
+          </button>
+          <button
+            id="btn-play"
+            class="play-btn"
+            title="Пауза или воспроизведение"
+            aria-label="Воспроизвести"
+          ></button>
+          <button
+            id="btn-next"
+            class="ghost-btn"
+            title="Следующий"
+            aria-label="Следующий"
+          >
+            <span data-icon="next"></span>
+          </button>
+          <button
+            id="btn-repeat"
+            class="ghost-btn small"
+            title="Повтор"
+            aria-label="Повтор"
+          >
+            <span data-icon="repeat"></span
+            ><span id="repeat-one" class="badge-one hidden">1</span>
+          </button>
+        </div>
+        <div class="seekrow">
+          <span id="t-cur">0:00</span
+          ><input
+            id="seek"
+            aria-label="Позиция воспроизведения"
+            type="range"
+            min="0"
+            max="100"
+            step="0.1"
+            value="0"
+          /><span id="t-dur">0:00</span>
+        </div>
+      </div>
+      <div class="bar-right">
+        <button
+          id="vol-btn"
+          class="ghost-btn small"
+          title="Звук"
+          aria-label="Звук"
+        ></button
+        ><input
+          id="vol"
+          aria-label="Громкость"
+          type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.8"
+        />
+      </div>
+    </footer>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="icons.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

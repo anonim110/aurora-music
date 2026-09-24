@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aurora — мини-плеер</title>
+    <link rel="stylesheet" href="tail.css" />
+  </head>
+  <body>
+    <aside class="widget" aria-label="Мини-плеер">
+      <div class="widget-head">
+        <div class="brand">
+          <span data-icon="logo"></span>AURORA <i>СЕЙЧАС ИГРАЕТ</i>
+        </div>
+        <div class="window-actions">
+          <button
+            id="restore"
+            title="Открыть приложение"
+            aria-label="Открыть приложение"
+          >
+            <span data-icon="open"></span></button
+          ><button
+            id="quit"
+            title="Выйти из приложения"
+            aria-label="Выйти из приложения"
+          >
+            <span data-icon="close"></span>
+          </button>
+        </div>
+      </div>
+      <div class="widget-main">
+        <div class="artwork">
+          <img id="art" alt="" /><span
+            class="art-fallback"
+            data-icon="music"
+          ></span>
+        </div>
+        <div class="track">
+          <div id="t">Выберите трек</div>
+          <div id="a">Музыка рядом</div>
+        </div>
+      </div>
+      <div class="timeline" aria-label="Ход воспроизведения">
+        <div class="progress"><i id="pr"></i></div>
+        <div class="time">
+          <span id="elapsed">0:00</span><span id="duration">0:00</span>
+        </div>
+      </div>
+      <div class="widget-controls">
+        <button id="prev" title="Предыдущий трек" aria-label="Предыдущий трек">
+          <span data-icon="previous"></span></button
+        ><button
+          id="pp"
+          class="play"
+          title="Пауза или воспроизведение"
+          aria-label="Воспроизвести"
+        ></button
+        ><button id="next" title="Следующий трек" aria-label="Следующий трек">
+          <span data-icon="next"></span></button
+        ><span class="control-spacer"></span
+        ><button
+          id="stop"
+          title="Остановить воспроизведение"
+          aria-label="Остановить воспроизведение"
+        >
+          <span data-icon="stop"></span>
+        </button>
+      </div>
+    </aside>
+    <script src="icons.js"></script>
+    <script src="tail.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.test-deps/
+.venv/
+.build-venv/
+.build-tools/
+build/
+dist/
+AuroraMusic.spec
+aurora_data.json
+shot_tail.png
+tail_full.png
+tail_test.png
+tests/preview.png
+tests/widget-preview.png
+aurora_data.tmp
